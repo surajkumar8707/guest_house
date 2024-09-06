@@ -33,9 +33,9 @@
                                 <li class="nav-item  {{ isActiveRoute('front.gallery') }}">
                                     <a class="nav-link" href="{{ route('front.gallery') }}">Gallery</a>
                                 </li>
-                                <li class="nav-item  {{ isActiveRoute('front.blog') }}">
+                                {{-- <li class="nav-item  {{ isActiveRoute('front.blog') }}">
                                     <a class="nav-link" href="{{ route('front.blog') }}">Blog</a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item  {{ isActiveRoute('front.contact') }}">
                                     <a class="nav-link" href="{{ route('front.contact') }}">Contact Us</a>
                                 </li>

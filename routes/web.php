@@ -25,6 +25,7 @@ Route::group(['prefix' => '/', 'as' => 'front.'], function () {
     Route::get('/gallery', [\App\Http\Controllers\FrontController::class, 'gallery'])->name('gallery');
     Route::get('/blog', [\App\Http\Controllers\FrontController::class, 'blog'])->name('blog');
     Route::get('/contact-us', [\App\Http\Controllers\FrontController::class, 'contactUs'])->name('contact');
+    Route::post('/save-contact-us', [\App\Http\Controllers\FrontController::class, 'saveContactUs'])->name('save.contact');
 });
 
 Route::get('lang/{locale}', [\App\Http\Controllers\LanguageController::class, 'switchLang']);

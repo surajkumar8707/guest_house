@@ -29,7 +29,7 @@
                 </div>
                 <div class="col-md-7">
                     <div class="about_img">
-                        <figure><img src="images/about.png" alt="#" /></figure>
+                        <figure><img src="{{ public_asset('assets/front/images/about.png') }}" alt="#" /></figure>
                     </div>
                 </div>
             </div>
