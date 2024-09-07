@@ -1,7 +1,19 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\{Setting, SocialMediaLink};
 
+if (!function_exists('getSettings')) {
+    function getSettings(){
+        return Setting::first();
+    }
+}
+
+if (!function_exists('getSocialMediaLink')) {
+    function getSocialMediaLink(){
+        return SocialMediaLink::first();
+    }
+}
 
 if (!function_exists('deletePublicPathFiles')) {
     function deletePublicPathFiles($path)

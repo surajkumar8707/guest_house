@@ -22,8 +22,8 @@ class SettingSeeder extends Seeder
             'email' => 'admin@gmail.com',
             'whatsapp' => '+91 8707633860',
             'contact' => '+91 8707633860',
-            'address' => 'This is Address',
-            'header_image' => "assets/front/images/header/header.jpg",
+            'address' => 'Address',
+            'header_image' => "assets/front/images/header/header.png",
             'is_fresh' => 1,
         ]);
     }

@@ -5,10 +5,9 @@
                 <div class=" col-md-4">
                     <h3>Contact US</h3>
                     <ul class="conta">
-                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> Address</li>
-                        <li><i class="fa fa-mobile" aria-hidden="true"></i> +01 1234569540</li>
-                        <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="#">
-                                demo@gmail.com</a></li>
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> {{ $settings->address }}</li>
+                        <li><i class="fa fa-mobile" aria-hidden="true"></i> <a href="tel:{{ $settings->contact }}"> {{ $settings->contact }} </a></li>
+                        <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:{{ $settings->email }}"> {{ $settings->email }} </a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -47,10 +46,18 @@
                         <button class="sub_btn">subscribe</button>
                     </form> --}}
                     <ul class="social_icon">
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                        @if ($social->facebook_show == 1)
+                            <li><a href="{{ $social->facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        @endif
+                        @if ($social->twitter_show == 1)
+                            <li><a href="{{ $social->twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        @endif
+                        @if ($social->linkedin_show == 1)
+                            <li><a href="{{ $social->linkedin }}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        @endif
+                        @if ($social->youTube_show == 1)
+                            <li><a href="{{ $social->youTube }}"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                        @endif
                     </ul>
                 </div>
             </div>

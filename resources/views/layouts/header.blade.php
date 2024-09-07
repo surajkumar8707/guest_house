@@ -7,7 +7,7 @@
                     <div class="full">
                         <div class="center-desk">
                             <div class="logo">
-                                <a href="index.html"><img src="public/assets/front/images/logo.png" alt="#" /></a>
+                                <a href="index.html"><img src="{{ public_asset($settings->header_image) }}" alt="#" /></a>
                             </div>
                         </div>
                     </div>

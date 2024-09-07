@@ -1,3 +1,7 @@
+@php
+$settings = getSettings();
+$social = getSocialMediaLink();
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 
