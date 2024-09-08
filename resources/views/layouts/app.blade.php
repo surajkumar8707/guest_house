@@ -1,6 +1,6 @@
 @php
-$settings = getSettings();
-$social = getSocialMediaLink();
+    $settings = getSettings();
+    $social = getSocialMediaLink();
 @endphp
 <!DOCTYPE html>
 <html lang="en">
@@ -18,19 +18,21 @@ $social = getSocialMediaLink();
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="public/assets/front/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ public_asset('assets/front/css/bootstrap.min.css') }}">
     <!-- style css -->
-    <link rel="stylesheet" href="public/assets/front/css/style.css">
+    <link rel="stylesheet" href="{{ public_asset('assets/front/css/style.css') }}">
     <!-- Responsive-->
-    <link rel="stylesheet" href="public/assets/front/css/responsive.css">
+    <link rel="stylesheet" href="{{ public_asset('assets/front/css/responsive.css') }}">
     <!-- fevicon -->
     <link rel="icon" href="images/fevicon.png" type="image/gif" />
     <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="public/assets/front/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="{{ public_asset('assets/front/css/jquery.mCustomScrollbar.min.css') }}">
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
         media="screen">
+    <!-- Toastr CSS-->
+    <link rel="stylesheet" href="{{ public_asset('assets/front/css/toastr.css') }}">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -52,17 +54,23 @@ $social = getSocialMediaLink();
     @yield('content')
     <!-- end content -->
 
-    <!--  footer -->
-    @include('layouts.footer')
-    <!-- end footer -->
 
     <!-- Javascript files-->
     <script src="{{ public_asset('assets/front/js/jquery.min.js') }}"></script>
     <script src="{{ public_asset('assets/front/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ public_asset('assets/front/js/jquery-3.0.0.min.js') }}"></script>
+
     <!-- sidebar -->
     <script src="{{ public_asset('assets/front/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+
+    <!-- Toastr js-->
+    <script src="{{ public_asset('assets/front/js/toastr.js') }}"></script>
+
     <script src="{{ public_asset('assets/front/js/custom.js') }}"></script>
+
+    <!--  footer -->
+    @include('layouts.footer')
+    <!-- end footer -->
 </body>
 
 </html>

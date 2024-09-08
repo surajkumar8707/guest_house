@@ -19,25 +19,25 @@ class HomePageCarouselSeeder extends Seeder
         $default_carousels = array(
             [
                 'title' => 'SKY',
-                'image' => "assets/front/images/home_page_carousel/default/1.jpg",
+                'image' => "assets/front/images/slider/banner1.jpg",
                 'status' => 1,
                 'is_default' => 1,
             ],
             [
                 'title' => 'Lake',
-                'image' => "assets/front/images/home_page_carousel/default/2.jpg",
+                'image' => "assets/front/images/slider/banner2.jpg",
                 'status' => 1,
                 'is_default' => 1,
             ],
             [
                 'title' => 'LANDCAPE',
-                'image' => "assets/front/images/home_page_carousel/default/3.jpg",
+                'image' => "assets/front/images/slider/banner3.jpg",
                 'status' => 1,
                 'is_default' => 1,
             ],
             [
                 'title' => 'SLIDE',
-                'image' => "assets/front/images/home_page_carousel/default/4.jpg",
+                'image' => "assets/front/images/slider/1725688315.png",
                 'status' => 0,
                 'is_default' => 1,
             ],

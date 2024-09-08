@@ -38,6 +38,13 @@ Route::middleware('role:admin')->group(function () {
     Route::get('/social-media', [AdminController::class, 'socialMedia'])->name('social.media');
     Route::post('/social-media-update/{id}', [AdminController::class, 'socialMediaUpdate'])->name('social.media.update');
 
+    // Pages
+    Route::group(['prefix' => '/pages', 'as' => 'pages.'], function () {
+        Route::get('/about', [AdminController::class, 'aboutPage'])->name('about');
+        Route::get('/our-room', [AdminController::class, 'ourRoomPage'])->name('our.room');
+        Route::get('/gallery', [AdminController::class, 'galleryPage'])->name('gallery');
+    });
+
     Route::resource('home-page-carousel', HomePageCarouselController::class);
     Route::post('/change-status', [HomePageCarouselController::class, 'changeStatus'])->name('change.status');
 });

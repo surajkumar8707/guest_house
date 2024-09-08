@@ -9,13 +9,13 @@
                     <div class="col-md-6">
                         <h4 class="card-title">Home Page Carousel</h4>
                     </div>
-                    <div class="col-md-6 text-end">
+                    {{-- <div class="col-md-6 text-end">
                         <a class="btn btn-primary" href="{{ route('admin.home-page-carousel.create') }}">Add +</a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="card-body">
-                <div class="table-responsive">
+                {{-- <div class="table-responsive">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -40,7 +40,6 @@
                                             <input class="form-check-input change-status-input" type="checkbox"
                                                 id="flexSwitchCheckChecked" data-carousel-id="{{ $carousel->id }}""
                                                 @if ($carousel->status == 1) checked @endif>
-                                            {{-- <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label> --}}
                                         </div>
                                     </td>
                                     <td>
@@ -54,7 +53,6 @@
                                             <button class="text-danger btn"><i
                                                     class="menu-icon tf-icons bx bx-trash"></i></button>
                                         </form>
-                                        {{-- <span class="badge badge-primary">{{ date('D m Y', strtotime($carousel->created_at)) }}</span> --}}
                                     </td>
                                 </tr>
                             @empty
@@ -67,7 +65,8 @@
                     <div class="carousel-pagination">
                         {{ $carousels->links() }}
                     </div>
-                </div>
+                </div> --}}
+                {{ $dataTable->table() }}
             </div>
         </div>
 
@@ -107,4 +106,6 @@
             });
         });
     </script>
+
+    {{ $dataTable->scripts(attributes: ['type' => 'module']) }}
 @endpush

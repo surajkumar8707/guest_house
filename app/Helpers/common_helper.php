@@ -1,17 +1,34 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\{Setting, SocialMediaLink};
+use App\Models\{HomePageCarousel, Setting, SocialMediaLink};
 
 if (!function_exists('getSettings')) {
-    function getSettings(){
+    function getSettings()
+    {
         return Setting::first();
     }
 }
 
 if (!function_exists('getSocialMediaLink')) {
-    function getSocialMediaLink(){
+    function getSocialMediaLink()
+    {
         return SocialMediaLink::first();
+    }
+}
+
+if (!function_exists('getAllSlider')) {
+    function getAllSlider($param = 'all')
+    {
+        if ($param == 1) {
+            return HomePageCarousel::where('status', 1)->orderBy('created_at', 'DESC')->get();
+        } elseif ($param == 0) {
+            return HomePageCarousel::where('status', 0)->orderBy('created_at', 'ASC')->get();
+        } elseif ($param == 'all') {
+            return HomePageCarousel::orderBy('id', 'DESC')->get();
+        } else {
+            return collect([]);
+        }
     }
 }
 

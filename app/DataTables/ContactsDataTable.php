@@ -11,6 +11,7 @@ use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
+use Illuminate\Support\HtmlString;
 
 class ContactsDataTable extends DataTable
 {
@@ -22,8 +23,16 @@ class ContactsDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-            ->addColumn('action', 'contacts.action')
-            ->setRowId('id');
+            ->setRowId('id')
+            ->addColumn('index', function ($row) {
+                // This will add a sequential number column starting from 1
+                return $row->serial_no;
+            })
+            ->addColumn('created_at', function (Contact $Contact) {
+                $dates = 'Created: ' . $Contact->created_at->diffForHumans() . '<br><hr/>';
+                return new HtmlString($dates);
+            })
+            ->rawColumns(['created_at']);
     }
 
     /**
@@ -71,6 +80,12 @@ class ContactsDataTable extends DataTable
                     [5, 10, 25, 50, -1],
                     ['5', '10', '25', '50', 'Show all']
                 ],
+                'drawCallback' => 'function(settings) {
+                    var api = this.api();
+                    api.column(0).nodes().each(function(cell, i) {
+                        cell.innerHTML = i + 1;
+                    });
+                }',
                 'initComplete' => 'function () {
                 }',
 
@@ -83,19 +98,19 @@ class ContactsDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-            Column::make('id'),
-            Column::make('name'),
-            Column::make('email'),
-            // Column::make('phone'),
-            Column::make('message'),
-            // Column::make('add your columns'),
-            Column::make('created_at'),
-            Column::make('updated_at'),
-            Column::computed('action')
+            Column::computed('index') // Add this column for serial numbers
+                ->title('S.No') // Title for the column header
                 ->exportable(false)
                 ->printable(false)
                 ->width(60)
                 ->addClass('text-center'),
+            Column::make('name'),
+            Column::make('email'),
+            Column::make('phone'),
+            Column::make('subject'),
+            Column::make('message'),
+            // Column::make('add your columns'),
+            Column::make('created_at'),
         ];
     }
 

@@ -9,7 +9,9 @@ class FrontController extends Controller
 {
     public function home()
     {
-        return view('home');
+        $sliders = getAllSlider(1);
+        // dd($sliders->toArray());
+        return view('home', compact('sliders'));
     }
     public function aboutUs()
     {
@@ -26,6 +28,16 @@ class FrontController extends Controller
     public function blog()
     {
         return view('blog');
+    }
+
+    public function privacyPolicy()
+    {
+        return view('privacy_policy');
+    }
+
+    public function termsCondition()
+    {
+        return view('terms_condition');
     }
 
     public function contactUs()

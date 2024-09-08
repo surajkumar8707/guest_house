@@ -24,6 +24,8 @@ Route::group(['prefix' => '/', 'as' => 'front.'], function () {
     Route::get('/room', [\App\Http\Controllers\FrontController::class, 'room'])->name('room');
     Route::get('/gallery', [\App\Http\Controllers\FrontController::class, 'gallery'])->name('gallery');
     Route::get('/blog', [\App\Http\Controllers\FrontController::class, 'blog'])->name('blog');
+    Route::get('/privacy-policy', [\App\Http\Controllers\FrontController::class, 'privacyPolicy'])->name('privacy.policy');
+    Route::get('/terms-condition', [\App\Http\Controllers\FrontController::class, 'termsCondition'])->name('terms.condition');
     Route::get('/contact-us', [\App\Http\Controllers\FrontController::class, 'contactUs'])->name('contact');
     Route::post('/save-contact-us', [\App\Http\Controllers\FrontController::class, 'saveContactUs'])->name('save.contact');
 });

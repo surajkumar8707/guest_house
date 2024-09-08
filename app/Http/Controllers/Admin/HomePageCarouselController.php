@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\DataTables\HomePageCarouselDataTable;
 use Illuminate\Http\Request;
 use App\Models\HomePageCarousel;
 use App\Http\Controllers\Controller;
@@ -11,10 +12,11 @@ class HomePageCarouselController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(HomePageCarouselDataTable $dataTable)
     {
-        $carousels = HomePageCarousel::paginate(10);
-        return view('admin.home_page_carousel.index', compact('carousels'));
+        return $dataTable->render('admin.home_page_carousel.index');
+        // $carousels = HomePageCarousel::paginate(10);
+        // return view('admin.home_page_carousel.index', compact('carousels'));
     }
 
     /**

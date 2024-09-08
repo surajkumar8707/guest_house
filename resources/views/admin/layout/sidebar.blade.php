@@ -91,6 +91,43 @@
                 <div data-i18n="Analytics">App Setting</div>
             </a>
         </li>
+
+        <!-- App Pages -->
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Profile, Security &amp; Pages</span>
+        </li>
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div class="text-truncate" data-i18n="Pages">Pages</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="{{ route('admin.pages.about') }}" class="menu-link">
+                        <div class="text-truncate" data-i18n="Account">About Page</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="pages-account-settings-notifications.html" class="menu-link">
+                        <div class="text-truncate" data-i18n="Notifications">Notifications</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="pages-account-settings-connections.html" class="menu-link">
+                        <div class="text-truncate" data-i18n="Connections">Connections</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        {{-- <li class="menu-item">
+            <a href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/vertical-menu-template/app-email.html"
+                target="_blank" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-envelope"></i>
+                <div class="text-truncate" data-i18n="Email">Email</div>
+                <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
+            </a>
+        </li> --}}
+
         <li class="menu-item {{ isActiveRoute(['admin.profile']) }}">
             <a href="{{ route('admin.profile') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-user me-2"></i>
