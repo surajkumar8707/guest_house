@@ -87,7 +87,7 @@
             <div class="row">
                 <div class="col-md-5">
                     <div class="titlepage">
-                        <h2>About Us</h2>
+                        <h2>Jageshwar Temple</h2>
                         <p style="text-align: justify;">Jageshwar is a Hindu pilgrimage town near Almora in Almora district
                             of the Himalayan Indian state
                             of Uttarakhand. It is one of the Dhams (pilgrimage region) in the Shaivism tradition. The site
@@ -156,16 +156,18 @@
             <div class="row">
                 @forelse ($rooms as $room)
                     <div class="col-md-6 col-sm-12">
-                        <div id="serv_hover" class="room">
-                            <div class="room_img">
-                                <figure><img src="{{ public_asset($room->photo) }}" alt="{{ $room->name }}" /></figure>
+                        <a href="{{ route('front.room.detail.page', $room->id) }}">
+                            <div id="serv_hover" class="room">
+                                <div class="room_img">
+                                    <figure><img src="{{ public_asset($room->photo) }}" alt="{{ $room->name }}" /></figure>
+                                </div>
+                                <div class="bed_room">
+                                    <h3>{{ $room->name }}</h3>
+                                    <p class="room_price">₹{{ number_format($room->price, 2) }}</p> <!-- Display the price -->
+                                    <p>{{ $room->description }}</p>
+                                </div>
                             </div>
-                            <div class="bed_room">
-                                <h3>{{ $room->name }}</h3>
-                                <p class="room_price">₹{{ number_format($room->price, 2) }}</p> <!-- Display the price -->
-                                <p>{{ $room->description }}</p>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 @empty
                     <div class="col-md-12">
@@ -175,7 +177,6 @@
             </div>
         </div>
     </div>
-
     <!-- end our_room -->
 
     <!-- gallery -->

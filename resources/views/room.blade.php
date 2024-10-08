@@ -12,7 +12,45 @@
             </div>
         </div>
     </div>
-    <!-- our_room -->
+
+        <!-- our_room -->
+        <div class="our_room">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="titlepage">
+                            <h2>Our Room</h2>
+                            {{-- <p>Lorem Ipsum available, but the majority have suffered </p> --}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    @forelse ($rooms as $room)
+                        <div class="col-md-6 col-sm-12">
+                            <a href="{{ route('front.room.detail.page', $room->id) }}">
+                                <div id="serv_hover" class="room">
+                                    <div class="room_img">
+                                        <figure><img src="{{ public_asset($room->photo) }}" alt="{{ $room->name }}" /></figure>
+                                    </div>
+                                    <div class="bed_room">
+                                        <h3>{{ $room->name }}</h3>
+                                        <p class="room_price">₹{{ number_format($room->price, 2) }}</p> <!-- Display the price -->
+                                        <p>{{ $room->description }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @empty
+                        <div class="col-md-12">
+                            <p>No rooms available at the moment.</p>
+                        </div>
+                    @endforelse
+                </div>
+            </div>
+        </div>
+        <!-- end our_room -->
+
+    {{-- <!-- our_room -->
     <div class="our_room">
         <div class="container">
             <div class="row">
@@ -98,5 +136,5 @@
             </div>
         </div>
     </div>
-    <!-- end our_room -->
+    <!-- end our_room --> --}}
 @endsection

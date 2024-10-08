@@ -29,7 +29,8 @@ class FrontController extends Controller
     }
     public function room()
     {
-        return view('room');
+        $rooms = Room::where('status', 1)->get();
+        return view('room', compact('rooms'));
     }
     public function gallery()
     {
