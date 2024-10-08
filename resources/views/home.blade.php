@@ -80,6 +80,38 @@
     @endif
     <!-- end banner -->
 
+
+    <!-- about -->
+    <div class="about">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="titlepage">
+                        <h2>About Us</h2>
+                        <p style="text-align: justify;">Jageshwar is a Hindu pilgrimage town near Almora in Almora district
+                            of the Himalayan Indian state
+                            of Uttarakhand. It is one of the Dhams (pilgrimage region) in the Shaivism tradition. The site
+                            is protected under Indian laws, and managed by the Archaeological Survey of India (ASI). It
+                            includes Dandeshwar Temple, Chandi-ka-Temple, Jageshwar Temple, Kuber Temple, Mritunjaya Temple,
+                            Nanda Devi or Nau Durga, Nava-grah temple, a Pyramidal shrine, and Surya Temple. The site
+                            celebrates the Jageshwar Monsoon Festival during the Hindu calendar month of Shravan (overlaps
+                            with July–August) and the annual Maha Shivratri Mela (Shivratri festival), which takes place in
+                            early spring. </p>
+                        {{-- <a class="read_more" href="Javascript:void(0)"> Read More</a> --}}
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="about_img">
+                        <figure><img src="{{ public_asset('assets/front/images/jageshwar-temple-1.jpg') }}"
+                                alt="#" />
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end about -->
+
     <!-- about -->
     <div class="about">
         <div class="container-fluid">
@@ -117,86 +149,33 @@
                 <div class="col-md-12">
                     <div class="titlepage">
                         <h2>Our Room</h2>
-                        <p>Lorem Ipsum available, but the majority have suffered </p>
+                        {{-- <p>Lorem Ipsum available, but the majority have suffered </p> --}}
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div id="serv_hover" class="room">
-                        <div class="room_img">
-                            <figure><img src="{{ public_asset('assets/front/images/bedroom/bedroom1.jpg') }}"
-                                    alt="#" /></figure>
-                        </div>
-                        <div class="bed_room">
-                            <h3>Bed Room</h3>
-                            <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div id="serv_hover" class="room">
-                        <div class="room_img">
-                            <figure><img src="{{ public_asset('assets/front/images/bedroom/bedroom2.jpg') }}"
-                                    alt="#" /></figure>
-                        </div>
-                        <div class="bed_room">
-                            <h3>Bed Room</h3>
-                            <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there </p>
+                @forelse ($rooms as $room)
+                    <div class="col-md-6 col-sm-12">
+                        <div id="serv_hover" class="room">
+                            <div class="room_img">
+                                <figure><img src="{{ public_asset($room->photo) }}" alt="{{ $room->name }}" /></figure>
+                            </div>
+                            <div class="bed_room">
+                                <h3>{{ $room->name }}</h3>
+                                <p class="room_price">₹{{ number_format($room->price, 2) }}</p> <!-- Display the price -->
+                                <p>{{ $room->description }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div id="serv_hover" class="room">
-                        <div class="room_img">
-                            <figure><img src="{{ public_asset('assets/front/images/bedroom/bedroom3.jpg') }}"
-                                    alt="#" /></figure>
-                        </div>
-                        <div class="bed_room">
-                            <h3>Bed Room</h3>
-                            <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there </p>
-                        </div>
+                @empty
+                    <div class="col-md-12">
+                        <p>No rooms available at the moment.</p>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div id="serv_hover" class="room">
-                        <div class="room_img">
-                            <figure><img src="{{ public_asset('assets/front/images/bedroom/bedroom4.jpg') }}"
-                                    alt="#" /></figure>
-                        </div>
-                        <div class="bed_room">
-                            <h3>Bed Room</h3>
-                            <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div id="serv_hover" class="room">
-                        <div class="room_img">
-                            <figure><img src="{{ public_asset('assets/front/images/bedroom/bedroom5.jpg') }}"
-                                    alt="#" /></figure>
-                        </div>
-                        <div class="bed_room">
-                            <h3>Bed Room</h3>
-                            <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div id="serv_hover" class="room">
-                        <div class="room_img">
-                            <figure><img src="{{ public_asset('assets/front/images/bedroom/bedroom6.jpg') }}"
-                                    alt="#" /></figure>
-                        </div>
-                        <div class="bed_room">
-                            <h3>Bed Room</h3>
-                            <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there </p>
-                        </div>
-                    </div>
-                </div>
+                @endforelse
             </div>
         </div>
     </div>
+
     <!-- end our_room -->
 
     <!-- gallery -->
@@ -212,8 +191,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="gallery_img">
-                        <figure><img src="{{ public_asset('assets/front/images/gallery/gallery1.jpg') }}"
-                                alt="#" />
+                        <figure><img src="{{ public_asset('assets/front/images/gallery/gallery1.jpg') }}" alt="#" />
                         </figure>
                     </div>
                 </div>

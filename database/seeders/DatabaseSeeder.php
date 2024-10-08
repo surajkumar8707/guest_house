@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             HomePageCarouselSeeder::class,
             SettingSeeder::class,
             SocialMediaLinkSeeder::class,
+            RoomSeeder::class,
         ]);
     }
 }
