@@ -39,8 +39,8 @@ class FrontController extends Controller
             'email' => 'required|email',
             'phone' => 'required|string|max:15',
             'city' => 'required|string|max:255',
-            'arrival' => 'required|date|after_or_equal:today',
-            'departure' => 'required|date|after:arrival',
+            'arrival' => 'required|date',
+            'departure' => 'required|date',
         ]);
 
         // Save the booking (assuming you have a Booking model)

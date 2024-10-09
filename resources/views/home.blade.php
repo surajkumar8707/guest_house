@@ -25,17 +25,6 @@
                             </div>
                         </div>
                     @endforeach
-                    {{-- <div class="carousel-item active">
-                        <img class="sliders" src="public/assets/front/images/banner1.jpg" alt="First slide">
-                        <div class="container">
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img class="sliders" src="public/assets/front/images/banner2.jpg" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="sliders" src="public/assets/front/images/banner3.jpg" alt="Third slide">
-                    </div> --}}
                 </div>
                 <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -52,7 +41,7 @@
                         <div class="col-md-5">
                             <div class="book_room">
                                 <h1>Book a Room Online</h1>
-                                <form class="book_now">
+                                {{-- <form class="book_now">
                                     <div class="row">
                                         <div class="col-md-12">
                                             <span>Arrival</span>
@@ -70,7 +59,8 @@
                                             <button class="book_btn">Book Now</button>
                                         </div>
                                     </div>
-                                </form>
+                                </form> --}}
+                                <a href="{{ route('front.room.book') }}"><button class="book_btn">Book Now</button></a>
                             </div>
                         </div>
                     </div>
@@ -104,36 +94,6 @@
                     <div class="about_img">
                         <figure><img src="{{ public_asset('assets/front/images/jageshwar-temple-1.jpg') }}"
                                 alt="#" />
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end about -->
-
-    <!-- about -->
-    <div class="about">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="titlepage">
-                        <h2>About Us</h2>
-                        <p>The passage experienced a surge in popularity during the 1960s when Letraset
-                            used it on their
-                            dry-transfer sheets, and again during the 90s as desktop publishers bundled
-                            the text with
-                            their software. Today it's seen all around the web; on templates, websites,
-                            and stock
-                            designs. Use our generator to get your own, or read on for the authoritative
-                            history of
-                            lorem ipsum. </p>
-                        <a class="read_more" href="Javascript:void(0)"> Read More</a>
-                    </div>
-                </div>
-                <div class="col-md-7">
-                    <div class="about_img">
-                        <figure><img src="{{ public_asset('assets/front/images/pages/about.jpg') }}" alt="#" />
                         </figure>
                     </div>
                 </div>

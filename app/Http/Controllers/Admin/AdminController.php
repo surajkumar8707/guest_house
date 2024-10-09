@@ -149,7 +149,7 @@ class AdminController extends Controller
     }
 
     public function bookings(){
-        $bookings = Booking::with('room')->get(); // Assuming each booking has a 'room' relationship
+        $bookings = Booking::with('room')->orderBy('created_at', 'DESC')->get(); // Assuming each booking has a 'room' relationship
         return view('admin.bookings.index', compact('bookings'));
     }
 

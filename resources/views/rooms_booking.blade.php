@@ -43,7 +43,7 @@
                             <select name="room_id" id="room_id" class="form-control">
                                 <option value="">-- Select room --</option>
                                 @foreach ($rooms as $r)
-                                    <option value="{{ $r->id }}" {{ old('room_id', $room->id) == $r->id ? 'selected' : '' }}>{{ $r->name }}</option>
+                                    <option value="{{ $r->id }}" {{ old('room_id', @$room->id) == $r->id ? 'selected' : '' }}>{{ $r->name }}</option>
                                 @endforeach
                             </select>
                             @error('room_id')
@@ -69,7 +69,7 @@
 
                         <div class="form-group">
                             <label for="phone">Phone:</label>
-                            <input type="number" class="form-control" id="phone" name="phone" value="{{ old('phone') }}" required>
+                            <input type="number" class="form-control" id="phone" name="phone" value="{{ old('phone') }}" required placeholder="Enter number">
                             @error('phone')
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror
@@ -77,7 +77,7 @@
 
                         <div class="form-group">
                             <label for="city">City:</label>
-                            <input type="text" class="form-control" id="city" name="city" value="{{ old('city') }}" required>
+                            <input type="text" class="form-control" id="city" name="city" value="{{ old('city') }}" required placeholder="Enter city">
                             @error('city')
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror
