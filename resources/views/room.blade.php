@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', getSettings()->app_name.':: Rooms Page')
 @section('content')
     <div class="back_re">
         <div class="container">

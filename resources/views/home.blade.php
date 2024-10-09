@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', getSettings()->app_name.':: Home Page')
 @section('content')
     <!-- banner -->
     @if (count($sliders) > 0)
@@ -185,136 +185,111 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>gallery</h2>
+                        <h2>Our Near By Best Destination</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4 col-sm-12">
+                    <h2>Patal Bhuvaneshwar</h2>
                     <div class="gallery_img">
-                        <figure><img src="{{ public_asset('assets/front/images/gallery/gallery1.jpg') }}" alt="#" />
+                        <figure><img src="{{ public_asset('assets/front/images/patal-bhuvneshwar.jpg') }}" alt="#" />
                         </figure>
                     </div>
+                    <p>Patal Bhuvaneshwar (Hindi पाताल भुवनेश्वर) is a limestone Hindu cave temple 14 km from Gangolihat in the Pithoragarh district of Uttarakhand state in India. It is located in the village of Bhubneshwar. Legend and folklore have it that this cave enshrines Lord Shiva and thirty three koti demigods [33 Types, In hindu neumerology "Koti" means "Types"]. The cave is 160 m long and 90 feet deep from the point of entrance. Limestone rock formations have created various spectacular stalactite and stalagmite figures of various hues and forms. This cave has a narrow tunnel-like opening which leads to a number of caves.</p>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4 col-sm-12">
+                    <h2>Neem Karoli</h2>
                     <div class="gallery_img">
-                        <figure><img src="{{ public_asset('assets/front/images/gallery/gallery3.jpg') }}"
+                        <figure><img src="{{ public_asset('assets/front/images/neem-karoli.jpg') }}"
                                 alt="#" />
                         </figure>
                     </div>
+                    <p>Neem Karoli Baba, also known as Neeb Karori Baba or Maharajji, was a renowned Hindu saint and mystic who lived in the 20th century. His teachings and simple way of life touched the hearts of many, including prominent individuals such as Steve Jobs and Mark Zuckerberg. Neem Karoli Baba's spiritual influence led to the establishment of numerous ashrams and temples dedicated to his teachings, with Neem Karoli Baba Kainchi Dham being one of the most prominent.</p>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4 col-sm-12">
+                    <h2>Jageshwar Temple</h2>
                     <div class="gallery_img">
-                        <figure><img src="{{ public_asset('assets/front/images/gallery/gallery5.jpg') }}"
+                        <figure><img src="{{ public_asset('assets/front/images/jageshwar-temple.jpg') }}"
                                 alt="#" />
                         </figure>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="gallery_img">
-                        <figure><img src="{{ public_asset('assets/front/images/gallery/gallery19.jpg') }}"
-                                alt="#" />
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="gallery_img">
-                        <figure><img src="{{ public_asset('assets/front/images/gallery/gallery9.jpg') }}"
-                                alt="#" />
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="gallery_img">
-                        <figure><img src="{{ public_asset('assets/front/images/gallery/gallery10.jpg') }}"
-                                alt="#" />
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="gallery_img">
-                        <figure><img src="{{ public_asset('assets/front/images/gallery/gallery31.jpg') }}"
-                                alt="#" />
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="gallery_img">
-                        <figure><img src="{{ public_asset('assets/front/images/gallery/gallery35.jpg') }}"
-                                alt="#" />
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="gallery_img">
-                        <figure><img src="{{ public_asset('assets/front/images/gallery/gallery27.jpg') }}"
-                                alt="#" />
-                        </figure>
-                    </div>
+                    <p>Jageshwar is a Hindu pilgrimage town near Almora in Almora district of the Himalayan Indian state of Uttarakhand. It is one of the Dhams (pilgrimage region) in the Shaivism tradition. The site is protected under Indian laws, and managed by the Archaeological Survey of India (ASI). It includes Dandeshwar Temple, Chandi-ka-Temple, Jageshwar Temple, Kuber Temple, Mritunjaya Temple, Nanda Devi or Nau Durga, Nava-grah temple, a Pyramidal shrine, and Surya Temple. The site celebrates the Jageshwar Monsoon Festival during the Hindu calendar month of Shravan (overlaps with July–August) and the annual Maha Shivratri Mela (Shivratri festival), which takes place in early spring.</p>
                 </div>
             </div>
         </div>
     </div>
     <!-- end gallery -->
 
-    {{-- <!-- blog -->
-    <div class="blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage">
-                        <h2>Blog</h2>
-                        <p>Lorem Ipsum available, but the majority have suffered </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="blog_box">
-                        <div class="blog_img">
-                            <figure><img src="public/assets/front/images/blog1.jpg" alt="#" /></figure>
-                        </div>
-                        <div class="blog_room">
-                            <h3>Bed Room</h3>
-                            <span>The standard chunk </span>
-                            <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
-                                anything embarrassing hidden in the middle of text. All the Lorem Ipsum generatorsIf you
-                                are </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="blog_box">
-                        <div class="blog_img">
-                            <figure><img src="public/assets/front/images/blog2.jpg" alt="#" /></figure>
-                        </div>
-                        <div class="blog_room">
-                            <h3>Bed Room</h3>
-                            <span>The standard chunk </span>
-                            <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
-                                anything embarrassing hidden in the middle of text. All the Lorem Ipsum generatorsIf you
-                                are </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="blog_box">
-                        <div class="blog_img">
-                            <figure><img src="public/assets/front/images/blog3.jpg" alt="#" /></figure>
-                        </div>
-                        <div class="blog_room">
-                            <h3>Bed Room</h3>
-                            <span>The standard chunk </span>
-                            <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
-                                anything embarrassing hidden in the middle of text. All the Lorem Ipsum generatorsIf you
-                                are </p>
-                        </div>
-                    </div>
+<br>
+<br>
+    <!-- user reviews -->
+<div class="reviews mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>What Our Guests Say</h2>
                 </div>
             </div>
         </div>
+        <div id="reviewCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#reviewCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#reviewCarousel" data-slide-to="1"></li>
+                <li data-target="#reviewCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 text-center">
+                            <div class="review_text">
+                                <img src="{{ public_asset('assets/front/images/avator.png') }}" alt="John Doe" class="avatar-img rounded-circle mb-3" style="width: 80px; height: 80px;">
+                                <p>"Had a wonderful stay! The rooms were clean and the staff was very friendly. Will definitely come back!"</p>
+                                <h5>- John Doe</h5>
+                                <span>★★★★★</span> <!-- Rating out of 5 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 text-center">
+                            <div class="review_text">
+                                <img src="{{ public_asset('assets/front/images/avator.png') }}" alt="Jane Smith" class="avatar-img rounded-circle mb-3" style="width: 80px; height: 80px;">
+                                <p>"Amazing location and peaceful atmosphere. Perfect for a getaway."</p>
+                                <h5>- Jane Smith</h5>
+                                <span>★★★★☆</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 text-center">
+                            <div class="review_text">
+                                <img src="{{ public_asset('assets/front/images/avator.png') }}" alt="Michael Brown" class="avatar-img rounded-circle mb-3" style="width: 80px; height: 80px;">
+                                <p>"Beautiful scenery, excellent service, and great food. Highly recommend!"</p>
+                                <h5>- Michael Brown</h5>
+                                <span>★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#reviewCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#reviewCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
     </div>
-    <!-- end blog --> --}}
+</div>
+<!-- end reviews -->
+
 
     <!--  contact -->
     <div class="contact">

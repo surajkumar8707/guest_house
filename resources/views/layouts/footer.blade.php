@@ -3,14 +3,11 @@
         <div class="container">
             <div class="row">
                 <div class=" col-md-4">
-                    <h3>Contact US</h3>
-                    <ul class="conta">
-                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> {{ $settings->address }}</li>
-                        <li><i class="fa fa-mobile" aria-hidden="true"></i> <a href="tel:{{ $settings->contact }}">
-                                {{ $settings->contact }} </a></li>
-                        <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:{{ $settings->email }}">
-                                {{ $settings->email }} </a></li>
-                    </ul>
+                    <h3>About US</h3>
+                    <p style="text-align: justify;">
+                        At Guest House, we pride ourselves on offering exceptional hospitality and comfort in a serene and welcoming environment. Located in the heart of Uttrakhand, our hotel combines luxury with a home-like atmosphere to provide an unforgettable stay for both business and leisure travelers.
+                    </p>
+
                 </div>
                 <div class="col-md-4">
                     <h3>Menu Link</h3>
@@ -30,10 +27,6 @@
                         <li class="{{ isActiveRoute('front.contact') }}">
                             <a href="{{ route('front.contact') }}">Contact Us</a>
                         </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="link_menu">
                         <li class="{{ isActiveRoute('front.terms.condition') }}">
                             <a href="{{ route('front.terms.condition') }}">Terms and Condition</a>
                         </li>
@@ -41,23 +34,35 @@
                             <a href="{{ route('front.privacy.policy') }}">Privacy Policy</a>
                         </li>
                     </ul>
-                    <ul class="social_icon">
-                        @if ($social->facebook_show == 1)
-                            <li><a href="{{ $social->facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            </li>
-                        @endif
-                        @if ($social->twitter_show == 1)
-                            <li><a href="{{ $social->twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            </li>
-                        @endif
-                        @if ($social->linkedin_show == 1)
-                            <li><a href="{{ $social->linkedin }}"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                            </li>
-                        @endif
-                        @if ($social->youTube_show == 1)
-                            <li><a href="{{ $social->youTube }}"><i class="fa fa-youtube-play"
-                                        aria-hidden="true"></i></a></li>
-                        @endif
+                </div>
+                <div class=" col-md-4">
+                    <h3>Contact US</h3>
+                    <ul class="conta">
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> {{ $settings->address }}</li>
+                        <li><i class="fa fa-mobile" aria-hidden="true"></i> <a href="tel:{{ $settings->contact }}">
+                                {{ $settings->contact }} </a></li>
+                        <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:{{ $settings->email }}"> {{ $settings->email }} </a></li>
+                        <li>
+                            <ul class="social_icon">
+                                @if ($social->facebook_show == 1)
+                                    <li><a href="{{ $social->facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    </li>
+                                @endif
+                                @if ($social->twitter_show == 1)
+                                    <li><a href="{{ $social->twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    </li>
+                                @endif
+                                @if ($social->linkedin_show == 1)
+                                    <li><a href="{{ $social->linkedin }}"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                    </li>
+                                @endif
+                                @if ($social->youTube_show == 1)
+                                    <li><a href="{{ $social->youTube }}"><i class="fa fa-youtube-play"
+                                                aria-hidden="true"></i></a></li>
+                                @endif
+                            </ul>
+                        </li>
+
                     </ul>
                 </div>
             </div>

@@ -20,7 +20,7 @@ class RoomSeeder extends Seeder
             [
                 'name' => 'Double Bed Room',
                 'price' => 3000,
-                'photo' => "assets/front/images/bedroom/bedroom1.jpg",
+                'photo' => "assets/front/images/bedroom/double-bed.jpg",
                 'description' => 'Our Double Bed room offers a cozy and comfortable space ideal for couples or solo travelers seeking a peaceful retreat. Featuring a plush double bed, modern amenities, and a warm ambiance, this room ensures a restful stay. Enjoy a serene environment with all the comforts of home, including Wi-Fi access and a private bathroom.'
             ],
             [
