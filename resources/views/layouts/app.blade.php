@@ -42,7 +42,7 @@
 <body class="main-layout">
     <!-- loader  -->
     <div class="loader_bg">
-        <div class="loader"><img src="public/assets/front/images/loading.gif" alt="#" /></div>
+        <div class="loader"><img src="{{ public_asset('assets/front/images/loading.gif') }}" alt="#" /></div>
     </div>
     <!-- end loader -->
 

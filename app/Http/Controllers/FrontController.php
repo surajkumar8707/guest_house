@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
 use App\Models\Contact;
 use App\Models\Room;
 use Illuminate\Http\Request;
@@ -21,6 +22,32 @@ class FrontController extends Controller
     {
         $room = Room::findOrFail($id); // Use findOrFail to handle cases where the room is not found
         return view('rooms_details', compact('room'));
+    }
+
+    public function openRoomBookingPage($id = null)
+    {
+        $rooms = Room::where('status', 1)->get();
+        $room = Room::find($id); // Use findOrFail to handle cases where the room is not found
+        return view('rooms_booking', compact('room', 'rooms'));
+    }
+
+    public function roomBookingStore(Request $request)
+    {
+        $validateData = $request->validate([
+            'room_id' => 'required',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email',
+            'phone' => 'required|string|max:15',
+            'city' => 'required|string|max:255',
+            'arrival' => 'required|date|after_or_equal:today',
+            'departure' => 'required|date|after:arrival',
+        ]);
+
+        // Save the booking (assuming you have a Booking model)
+        Booking::create($validateData);
+
+        // Redirect with success message
+        return redirect()->route('front.room')->with('success', 'Your room has been booked successfully!');
     }
 
     public function aboutUs()

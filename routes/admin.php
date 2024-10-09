@@ -34,6 +34,7 @@ Route::middleware('role:admin')->group(function () {
     Route::post('/setting-update/{id}', [AdminController::class, 'settingUpdate'])->name('setting.update');
 
     Route::get('/contacts', [AdminController::class, 'contacts'])->name('contacts');
+    Route::get('/bookings', [AdminController::class, 'bookings'])->name('bookings');
 
     Route::get('/social-media', [AdminController::class, 'socialMedia'])->name('social.media');
     Route::post('/social-media-update/{id}', [AdminController::class, 'socialMediaUpdate'])->name('social.media.update');

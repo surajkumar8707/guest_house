@@ -7,6 +7,7 @@ use App\Models\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
+use App\Models\Booking;
 use App\Models\Contact;
 use App\Models\Setting;
 use App\Models\SocialMediaLink;
@@ -147,6 +148,11 @@ class AdminController extends Controller
         }
     }
 
+    public function bookings(){
+        $bookings = Booking::with('room')->get(); // Assuming each booking has a 'room' relationship
+        return view('admin.bookings.index', compact('bookings'));
+    }
+
     public function socialMedia()
     {
         try {
@@ -189,6 +195,6 @@ class AdminController extends Controller
     }
 
     public function aboutPage() {
-        
+
     }
 }

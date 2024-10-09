@@ -156,7 +156,7 @@
             <div class="row">
                 @forelse ($rooms as $room)
                     <div class="col-md-6 col-sm-12">
-                        <a href="{{ route('front.room.detail.page', $room->id) }}">
+                        {{-- <a href="{{ route('front.room.detail.page', $room->id) }}"> --}}
                             <div id="serv_hover" class="room">
                                 <div class="room_img">
                                     <figure><img src="{{ public_asset($room->photo) }}" alt="{{ $room->name }}" /></figure>
@@ -166,8 +166,16 @@
                                     <p class="room_price">₹{{ number_format($room->price, 2) }}</p> <!-- Display the price -->
                                     <p>{{ $room->description }}</p>
                                 </div>
+                                <div class="row mx-2 px-2">
+                                    <div class="col-6">
+                                        <a class="btn btn-primary btn-block" href="{{ route('front.room.book', $room->id) }}">Book</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="btn btn-primary btn-block" href="{{ route('front.room.detail.page', $room->id) }}">View</a>
+                                    </div>
+                                </div>
                             </div>
-                        </a>
+                        {{-- </a> --}}
                     </div>
                 @empty
                     <div class="col-md-12">
