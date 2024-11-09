@@ -67,7 +67,33 @@
                     </div>
                 </div>
             </div>
+
+            <div class="back_re mt-5">
+                <div class="container text-center">
+                    <h2 class="text-white">Address</h2>
+                </div>
+            </div>
+
+            <div class="address my-3">
+                <p class="mb-2">
+                    <strong>Address 1 : </strong> Behind aartola parking Aartola jageshwar road Aartola
+                </p>
+                <p class="mb-2">
+                    <strong>Address 2 : </strong> Tehsil bhanoli District almora
+                </p>
+                <p class="mb-2">
+                    <strong>Email : </strong> <a href="mailto:daarukavaneecoresort@gmail.com">daarukavaneecoresort@gmail.com</a>
+                </p>
+            </div>
         </div>
     </div>
     <!-- end contact -->
-@endsection
+    @endsection
+
+@push('styles')
+    <style>
+        .address p.mb-2 {
+            font-size: 18px;
+            }
+    </style>
+@endpush

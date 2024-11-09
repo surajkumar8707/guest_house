@@ -18,11 +18,11 @@ class SettingSeeder extends Seeder
 
         // Seed new data
         Setting::create([
-            'app_name' => 'App Name',
-            'email' => 'admin@gmail.com',
-            'whatsapp' => '+91 8707633860',
-            'contact' => '+91 8707633860',
-            'address' => 'Address',
+            'app_name' => 'Guest House',
+            'email' => 'daarukavaneecoresort@gmail.com',
+            'whatsapp' => '+91 6396021235',
+            'contact' => '+91 6396021235',
+            'address' => 'Behind aartola parking Aartola jageshwar road Aartola',
             'header_image' => "assets/front/images/header/header.png",
             'is_fresh' => 1,
         ]);
