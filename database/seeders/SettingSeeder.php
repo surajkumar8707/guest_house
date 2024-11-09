@@ -22,7 +22,7 @@ class SettingSeeder extends Seeder
             'email' => 'daarukavaneecoresort@gmail.com',
             'whatsapp' => '+91 6396021235',
             'contact' => '+91 6396021235',
-            'address' => 'Behind aartola parking Aartola jageshwar road Aartola',
+            'address' => 'Behind aartola parking Aartola jageshwar road Aartola, Tehsil bhanoli District almora',
             'header_image' => "assets/front/images/header/header.png",
             'is_fresh' => 1,
         ]);

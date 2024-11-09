@@ -76,13 +76,16 @@
 
             <div class="address my-3">
                 <p class="mb-2">
-                    <strong>Address 1 : </strong> Behind aartola parking Aartola jageshwar road Aartola
-                </p>
-                <p class="mb-2">
-                    <strong>Address 2 : </strong> Tehsil bhanoli District almora
+                    <strong>Address : </strong> Behind aartola parking Aartola jageshwar road Aartola
                 </p>
                 <p class="mb-2">
                     <strong>Email : </strong> <a href="mailto:daarukavaneecoresort@gmail.com">daarukavaneecoresort@gmail.com</a>
+                </p>
+                <p class="mb-2">
+                    <strong>Contact 1 : </strong> <a href="tel:+91 6396021235">6396021235</a>
+                </p>
+                <p class="mb-2">
+                    <strong>Contact 2 : </strong> <a href="tel:+91 9410312602">9410312602</a>
                 </p>
             </div>
         </div>
