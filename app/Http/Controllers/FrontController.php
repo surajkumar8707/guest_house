@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Booking;
 use App\Models\Contact;
 use App\Models\Room;
+use App\Mail\BookingMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class FrontController extends Controller
 {
@@ -43,8 +45,11 @@ class FrontController extends Controller
             'departure' => 'required|date',
         ]);
 
-        // Save the booking (assuming you have a Booking model)
-        Booking::create($validateData);
+        // Save the booking to the database
+        $booking = Booking::create($validateData);
+
+        // Send the booking confirmation email to the customer
+        Mail::to($booking->email)->send(new BookingMail($booking));
 
         // Redirect with success message
         return redirect()->route('front.room')->with('success', 'Your room has been booked successfully!');

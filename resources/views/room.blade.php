@@ -39,6 +39,7 @@
                                     </div>
                                 </div>
                             </a>
+                            <a href="{{ route('front.room.book', $room->id) }}" class="btn btn-danger">Book Now</a>
                         </div>
                     @empty
                         <div class="col-md-12">

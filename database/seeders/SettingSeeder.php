@@ -18,7 +18,7 @@ class SettingSeeder extends Seeder
 
         // Seed new data
         Setting::create([
-            'app_name' => 'Guest House',
+            'app_name' => 'Daaruka Vanecoresort',
             'email' => 'daarukavaneecoresort@gmail.com',
             'whatsapp' => '+91 6396021235',
             'contact' => '+91 6396021235',

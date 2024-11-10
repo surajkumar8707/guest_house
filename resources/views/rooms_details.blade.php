@@ -26,6 +26,7 @@
                         </div>
                         <p class="room_price">₹{{ number_format($room->price, 2) }}</p>
                         <p>{{ $room->description }}</p>
+                        <a href="{{ route('front.room.book', $room->id) }}" class="btn btn-danger">Book Now</a>
                     </div>
                 </div>
             </div>
