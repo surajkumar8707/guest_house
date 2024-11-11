@@ -4,10 +4,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                    <div class="full pt-2">
+                    <div class="full pt-3">
                         <div class="center-desk">
                             <div class="logo">
-                                <a href="index.html"><h1>{{$settings->app_name}}</h1></a>
+                                <a href="index.html"><h3>{{$settings->app_name}}</h3></a>
                             </div>
                         </div>
                     </div>
