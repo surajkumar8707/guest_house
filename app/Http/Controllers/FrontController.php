@@ -51,6 +51,14 @@ class FrontController extends Controller
         // Send the booking confirmation email to the customer
         Mail::to($booking->email)->send(new BookingMail($booking));
 
+        // Send the booking confirmation email to the Admin
+        if(isset(getSettings()->email) and !empty(getSettings()->email)){
+            Mail::to(getSettings()->email)->send(new BookingMail($booking));
+        }
+        else{
+            Mail::to('daarukavaneecoresort@gmail.com')->send(new BookingMail($booking));
+        }
+
         // Redirect with success message
         return redirect()->route('front.room')->with('success', 'Your room has been booked successfully!');
     }
