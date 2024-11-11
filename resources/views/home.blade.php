@@ -19,7 +19,7 @@
                             class="@if ($key == 0) active @endif">
                         </li> --}}
                         <div class="carousel-item @if ($key == 0) active @endif">
-                            <img class="sliders" src="{{ public_asset($slider->image) }}" alt="First slide">
+                            <img width="100%" class="sliders" src="{{ public_asset($slider->image) }}" alt="First slide">
                             <div class="container">
                                 {{-- {{ $slider->title }} --}}
                             </div>
