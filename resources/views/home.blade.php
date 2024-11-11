@@ -178,7 +178,7 @@
                 <div class="col-md-4 col-sm-12">
                     <h2>Jageshwar Temple</h2>
                     <div class="gallery_img">
-                        <figure><img src="{{ public_asset('assets/front/images/jageshwar-temple.jpg') }}"
+                        <figure><img src="{{ public_asset('assets/front/images/jageshwar-temple-1.jpg') }}"
                                 alt="#" />
                         </figure>
                     </div>
